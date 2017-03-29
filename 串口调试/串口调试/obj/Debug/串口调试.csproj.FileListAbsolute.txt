@@ -7,3 +7,12 @@ C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串�
 C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.exe
 C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.pdb
 C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.csprojResolveAssemblyReference.cache
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\bin\Debug\串口调试.exe.config
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.exe
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.pdb
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\bin\Debug\串口调试.exe
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\bin\Debug\串口调试.pdb
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.csprojResolveAssemblyReference.cache
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.Form1.resources
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.Properties.Resources.resources
+C:\Users\WYD\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.csproj.GenerateResource.Cache

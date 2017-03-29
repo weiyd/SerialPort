@@ -21,6 +21,9 @@ namespace 串口调试
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            windowSelect.Items.Add("ECG");
+            windowSelect.Items.Add("TEMP");
+
             this.MaximumSize = this.Size;
             this.MinimumSize = this.Size;
             this.MaximizeBox = false;
@@ -277,6 +280,43 @@ namespace 串口调试
         {
             tbxRecvData.Text = "";
             tbxSendData.Text = "";
+        }
+
+        // 通过comBox选择数据可视化界面
+        bool ECGFormShow = false;
+        bool TempFormShow = false;
+        Form2 formEcg = null;
+        Form3 formTemp = null;
+        private void cbxForm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (windowSelect.Text.Trim() == "ECG")
+            {
+                if (formEcg==null||!formEcg.IsHandleCreated)
+                {
+                    ECGFormShow = true;
+                    formEcg = new Form2();
+                    formEcg.Focus();
+                    formEcg.Show();
+                }
+                else
+                {
+                    formEcg.Focus();
+                }
+            }
+            else if (windowSelect.Text.Trim() == "TEMP")
+            {
+                if (formTemp == null || !formTemp.IsHandleCreated)
+                {
+                    TempFormShow = true;
+                    formTemp = new Form3();
+                    formTemp.Focus();
+                    formTemp.Show();
+                }
+                else
+                {
+                    formTemp.Focus();
+                }
+            }
         }
     }
 

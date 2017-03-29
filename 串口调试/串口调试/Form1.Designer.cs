@@ -51,6 +51,7 @@
             this.tbxSendData = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.windowSelect = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -59,6 +60,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.windowSelect);
             this.groupBox1.Controls.Add(this.cbxBaudRate);
             this.groupBox1.Controls.Add(this.cbxStopBits);
             this.groupBox1.Controls.Add(this.cbxParity);
@@ -122,7 +124,7 @@
             // 
             // btnOpenCom
             // 
-            this.btnOpenCom.Location = new System.Drawing.Point(364, 66);
+            this.btnOpenCom.Location = new System.Drawing.Point(364, 41);
             this.btnOpenCom.Name = "btnOpenCom";
             this.btnOpenCom.Size = new System.Drawing.Size(75, 23);
             this.btnOpenCom.TabIndex = 13;
@@ -132,7 +134,7 @@
             // 
             // btnCheckCom
             // 
-            this.btnCheckCom.Location = new System.Drawing.Point(364, 18);
+            this.btnCheckCom.Location = new System.Drawing.Point(364, 13);
             this.btnCheckCom.Name = "btnCheckCom";
             this.btnCheckCom.Size = new System.Drawing.Size(75, 23);
             this.btnCheckCom.TabIndex = 12;
@@ -281,6 +283,15 @@
             this.lblStatus.Size = new System.Drawing.Size(131, 17);
             this.lblStatus.Text = "toolStripStatusLabel1";
             // 
+            // windowSelect
+            // 
+            this.windowSelect.FormattingEnabled = true;
+            this.windowSelect.Location = new System.Drawing.Point(364, 69);
+            this.windowSelect.Name = "windowSelect";
+            this.windowSelect.Size = new System.Drawing.Size(75, 20);
+            this.windowSelect.TabIndex = 19;
+            this.windowSelect.SelectedIndexChanged += new System.EventHandler(this.cbxForm_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -331,6 +342,7 @@
         private System.Windows.Forms.ComboBox cbxCOMPort;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.ComboBox windowSelect;
     }
 }
 
