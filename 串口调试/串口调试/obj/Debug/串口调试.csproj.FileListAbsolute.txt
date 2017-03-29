@@ -1,0 +1,9 @@
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\bin\Debug\串口调试.exe.config
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\bin\Debug\串口调试.exe
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\bin\Debug\串口调试.pdb
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.Form1.resources
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.Properties.Resources.resources
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.csproj.GenerateResource.Cache
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.exe
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.pdb
+C:\Users\AD\Desktop\串口\串口调试\串口调试\串口调试\obj\Debug\串口调试.csprojResolveAssemblyReference.cache
