@@ -166,9 +166,16 @@ namespace 串口调试
         {
             if (isOpen)//写串口数据
             {
+                if (!CheckSendData())//检测要发送的数据
+                {
+                    MessageBox.Show("请输入要发送的数据！", "错误提示");
+                    return;
+                }
                 try
                 {
                     sp.WriteLine(tbxSendData.Text);
+                    tbxRecvData.Text = "";
+                    tbxSendData.Text = "";
                 }
                 catch (Exception)
                 {
@@ -181,11 +188,7 @@ namespace 串口调试
                 MessageBox.Show("串口未打开！", "错误提示");
                 return;
             }
-            if (!CheckSendData())//检测要发送的数据
-            {
-                MessageBox.Show("请输入要发送的数据！", "错误提示");
-                return;
-            }
+            
         }
         private void btnOpenCom_Click(object sender, EventArgs e)
         {
@@ -263,7 +266,7 @@ namespace 串口调试
                     String RecvDataText = null;
                     for (int i = 0; i < ReceivedData.Length - 1; i++)
                     {
-                        RecvDataText += ("0x" + ReceivedData[i].ToString("X2") + " ");
+                        RecvDataText += ("0x" + ReceivedData[i].ToString("X2") + " ");// X 十六进制 2每次两位数
                     }
                     tbxRecvData.Text += RecvDataText;
                 }
@@ -276,4 +279,5 @@ namespace 串口调试
             tbxSendData.Text = "";
         }
     }
+
 }

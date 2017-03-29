@@ -143,7 +143,7 @@
             // rbnHex
             // 
             this.rbnHex.AutoSize = true;
-            this.rbnHex.Location = new System.Drawing.Point(252, 82);
+            this.rbnHex.Location = new System.Drawing.Point(267, 73);
             this.rbnHex.Name = "rbnHex";
             this.rbnHex.Size = new System.Drawing.Size(65, 16);
             this.rbnHex.TabIndex = 11;
@@ -154,7 +154,7 @@
             // rbnChar
             // 
             this.rbnChar.AutoSize = true;
-            this.rbnChar.Location = new System.Drawing.Point(163, 82);
+            this.rbnChar.Location = new System.Drawing.Point(178, 73);
             this.rbnChar.Name = "rbnChar";
             this.rbnChar.Size = new System.Drawing.Size(71, 16);
             this.rbnChar.TabIndex = 10;
@@ -220,8 +220,9 @@
             // tbxRecvData
             // 
             this.tbxRecvData.Location = new System.Drawing.Point(9, 21);
+            this.tbxRecvData.Multiline = true;
             this.tbxRecvData.Name = "tbxRecvData";
-            this.tbxRecvData.Size = new System.Drawing.Size(454, 21);
+            this.tbxRecvData.Size = new System.Drawing.Size(454, 133);
             this.tbxRecvData.TabIndex = 0;
             // 
             // groupBox3
@@ -259,8 +260,9 @@
             // tbxSendData
             // 
             this.tbxSendData.Location = new System.Drawing.Point(9, 20);
+            this.tbxSendData.Multiline = true;
             this.tbxSendData.Name = "tbxSendData";
-            this.tbxSendData.Size = new System.Drawing.Size(351, 21);
+            this.tbxSendData.Size = new System.Drawing.Size(351, 116);
             this.tbxSendData.TabIndex = 1;
             // 
             // statusStrip1
