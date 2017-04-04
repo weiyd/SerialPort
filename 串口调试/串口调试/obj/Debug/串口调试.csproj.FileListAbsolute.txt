@@ -33,3 +33,5 @@ E:\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.csprojRes
 E:\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.Form1.resources
 E:\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.Properties.Resources.resources
 E:\Desktop\SerialPort\串口调试\串口调试\obj\Debug\串口调试.csproj.GenerateResource.Cache
+E:\Desktop\SerialPort\串口调试\串口调试\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Desktop\SerialPort\串口调试\串口调试\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll

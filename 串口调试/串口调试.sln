@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "串口调试", "串口调试\串口调试.csproj", "{18A4AB2B-C72A-4BE6-B5AE-A500D7E53CC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "串口调试Tests", "串口调试Tests\串口调试Tests.csproj", "{8623BD1A-6032-4D88-8BEE-6D29B82EDA7F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{18A4AB2B-C72A-4BE6-B5AE-A500D7E53CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A4AB2B-C72A-4BE6-B5AE-A500D7E53CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A4AB2B-C72A-4BE6-B5AE-A500D7E53CC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8623BD1A-6032-4D88-8BEE-6D29B82EDA7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8623BD1A-6032-4D88-8BEE-6D29B82EDA7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8623BD1A-6032-4D88-8BEE-6D29B82EDA7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8623BD1A-6032-4D88-8BEE-6D29B82EDA7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -31,7 +31,7 @@ namespace 串口调试
             {
                 cbxCOMPort.Items.Add("COM" + (i + 1).ToString());
             }
-            cbxCOMPort.SelectedIndex = 0;
+            cbxCOMPort.SelectedIndex = 2;
             //列出常用的波特率
             cbxBaudRate.Items.Add("1200");
             cbxBaudRate.Items.Add("2400");
@@ -43,7 +43,7 @@ namespace 串口调试
             cbxBaudRate.Items.Add("56000");
             cbxBaudRate.Items.Add("57600");
             cbxBaudRate.Items.Add("115200");
-            cbxBaudRate.SelectedIndex = 5;
+            cbxBaudRate.SelectedIndex = 3;
             //列出停止位
             cbxStopBits.Items.Add("0");
             cbxStopBits.Items.Add("1");
@@ -272,13 +272,20 @@ namespace 串口调试
                 {
                     Byte[] ReceivedData = new Byte[sp.BytesToRead]; //创建接收字节数组
                     sp.Read(ReceivedData, 0, ReceivedData.Length); //读取所接收到的数据
-                    String RecvDataText = null;
-                    for (int i = 0; i < ReceivedData.Length - 1; i++)
+
+                    UartProtocol up = new UartProtocol();
+                    up.revNewData(ReceivedData);
+                    if (up.isFinished())
                     {
-                        RecvDataText += ("0x" + ReceivedData[i].ToString("X2") + " ");// X 十六进制 2每次两位数
+                        byte[] temp = up.packageData();
+                        String RecvDataText = null;
+                        for (int i = 0; i < temp.Length; i++)
+                        {
+                            RecvDataText += ("0x" + temp[i].ToString("X2") + " ");// X 十六进制 2每次两位数
+                        }
+                        tbxRecvData.Text = "";
+                        tbxRecvData.Text += RecvDataText;
                     }
-                    tbxRecvData.Text = "";
-                    tbxRecvData.Text += RecvDataText;
                 }
                 sp.DiscardInBuffer();//丢弃接收缓冲区数据
             });

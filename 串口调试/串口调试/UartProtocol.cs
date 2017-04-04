@@ -141,8 +141,4 @@ namespace 串口调试
             return revFinished;
         }
     }
-    public class test
-    {
-        static public int a = 1;
-    }
 }
