@@ -154,6 +154,7 @@ namespace 串口调试
             }
             sp.ReadTimeout = -1;//设置超时读取时间
             sp.RtsEnable = true;
+
             //定义 DataReceived 事件，当串口收到数据后触发事件
             sp.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);
             if (rbnHex.Checked)
@@ -208,8 +209,7 @@ namespace 串口调试
                     isSetProperty = true;
                 }
                 try//打开串口
-                {
-                    sp.Open();
+                {    
                     isOpen = true;
                     btnOpenCom.Text = "关闭串口";
                     //串口打开后则相关的串口设置按钮便不可再用
@@ -220,6 +220,7 @@ namespace 串口调试
                     cbxStopBits.Enabled = false;
                     rbnChar.Enabled = false;
                     rbnHex.Enabled = false;
+                    sp.Open();
                 }
                 catch (Exception)
                 {
@@ -231,9 +232,8 @@ namespace 串口调试
             }
             else
             {
-                try//打开串口
+                try//关闭串口
                 {
-                    sp.Close();
                     isOpen = false;
                     isSetProperty = false;
                     btnOpenCom.Text = "打开串口";
@@ -245,6 +245,7 @@ namespace 串口调试
                     cbxStopBits.Enabled = true;
                     rbnChar.Enabled = true;
                     rbnHex.Enabled = true;
+                    sp.Close();                   
                 }
                 catch (Exception)
                 {
@@ -256,11 +257,16 @@ namespace 串口调试
         {
             System.Threading.Thread.Sleep(100);//延时 100ms 等待接收完数据
                                                //this.Invoke 就是跨线程访问 ui 的方法，也是本文的范例
-            this.Invoke((EventHandler)(delegate
+            // invoke匿名委托
+            this.Invoke((EventHandler)delegate
             {
                 if (isHex == false)
                 {
-                    tbxRecvData.Text += sp.ReadLine();
+                    if(sp.BytesToRead>0)
+                    {
+                        tbxRecvData.Text = "";
+                        tbxRecvData.Text += sp.ReadLine();   
+                    }
                 }
                 else
                 {
@@ -271,10 +277,11 @@ namespace 串口调试
                     {
                         RecvDataText += ("0x" + ReceivedData[i].ToString("X2") + " ");// X 十六进制 2每次两位数
                     }
+                    tbxRecvData.Text = "";
                     tbxRecvData.Text += RecvDataText;
                 }
                 sp.DiscardInBuffer();//丢弃接收缓冲区数据
-            }));
+            });
         }
         private void btnCleanData_Click(object sender, EventArgs e)
         {

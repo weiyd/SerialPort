@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.windowSelect = new System.Windows.Forms.ComboBox();
             this.cbxBaudRate = new System.Windows.Forms.ComboBox();
             this.cbxStopBits = new System.Windows.Forms.ComboBox();
             this.cbxParity = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.tbxSendData = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.windowSelect = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,6 +81,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "串口设置";
+            // 
+            // windowSelect
+            // 
+            this.windowSelect.FormattingEnabled = true;
+            this.windowSelect.Location = new System.Drawing.Point(364, 69);
+            this.windowSelect.Name = "windowSelect";
+            this.windowSelect.Size = new System.Drawing.Size(75, 20);
+            this.windowSelect.TabIndex = 19;
+            this.windowSelect.SelectedIndexChanged += new System.EventHandler(this.cbxForm_SelectedIndexChanged);
             // 
             // cbxBaudRate
             // 
@@ -212,6 +221,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tbxRecvData);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox2.Location = new System.Drawing.Point(12, 145);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(469, 160);
@@ -271,9 +281,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 457);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 653);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(489, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1037, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -283,24 +293,16 @@
             this.lblStatus.Size = new System.Drawing.Size(131, 17);
             this.lblStatus.Text = "toolStripStatusLabel1";
             // 
-            // windowSelect
-            // 
-            this.windowSelect.FormattingEnabled = true;
-            this.windowSelect.Location = new System.Drawing.Point(364, 69);
-            this.windowSelect.Name = "windowSelect";
-            this.windowSelect.Size = new System.Drawing.Size(75, 20);
-            this.windowSelect.TabIndex = 19;
-            this.windowSelect.SelectedIndexChanged += new System.EventHandler(this.cbxForm_SelectedIndexChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 479);
+            this.ClientSize = new System.Drawing.Size(1037, 675);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
